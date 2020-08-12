@@ -1,0 +1,8 @@
+h1
+  | Room #{@room.id}
+= link_to "Leave", root_path
+p#notice= notice
+.messages
+  #messages.messages-inner data-room-id="#{@room.id}"
+    = render @room.messages
+= render 'messages/form'

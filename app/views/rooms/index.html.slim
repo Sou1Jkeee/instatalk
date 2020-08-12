@@ -1,0 +1,8 @@
+p#notice
+  = notice
+h1
+  | Rooms
+ul.mt-4.list-unstyled
+  = render @rooms
+.mt-2
+  = render 'rooms/form', room: @room

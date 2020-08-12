@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title
+      | Instatalk
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    .container
+      .row.justify-content-md-center
+        .col-md-8
+          .card.text-center.mt-4.mb-4
+            .card-body
+              ' Welcome to Instatalk,
+              b
+                = current_user.nickname
+          = yield
